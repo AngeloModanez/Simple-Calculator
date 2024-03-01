@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './calc.component.css'
 })
 export class CalcComponent {
-  num1: number = 0;
-  num2: number = 0;
+  num1!: number;
+  num2!: number;
   total: number = 0;
 
-
+  calcAdd(){
+    this.total = this.num1 + this.num2;
+  }
 }
