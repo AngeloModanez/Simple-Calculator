@@ -1,7 +1,21 @@
-<input type="number" [(ngModel)]="num1" name="number1">
-<input type="number" [(ngModel)]="num2" name="number2">
-<button (click)="calcAdd()">Sum</button>
-<button (click)="calcSub()">SUBTRACT</button>
-<button (click)="calcMul()">MULTIPLY</button>
-<button (click)="calcDiv()">DIVIDE</button>
-{{total}}
+<div class="content">
+  <div class="calculator">
+    <div class="input-main">
+      <h3>First Number:</h3>
+      <input type="number" [(ngModel)]="num1" name="number1" />
+      <h3>Second Number:</h3>
+      <input type="number" [(ngModel)]="num2" name="number2" />
+    </div>
+
+    <div class="button-main">
+      <button (click)="calcAdd()">Sum</button>
+      <button (click)="calcSub()">Subtract</button>
+      <button (click)="calcMul()">Multiply</button>
+      <button (click)="calcDiv()">Divide</button>
+    </div>
+
+    <div class="total">
+      <h2>Result = {{ total }}</h2>
+    </div>
+  </div>
+</div>
